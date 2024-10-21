@@ -41,7 +41,7 @@ export default function Intro() {
             {/* Clickable div to open popup */}
             <div onClick={togglePopup} className="cursor-pointer">
               <Image
-                src="/MyPotrait.jfif"
+                src="/MyProfile.png"
                 alt="Vigneshwaran portrait"
                 width="192"
                 height="192"
