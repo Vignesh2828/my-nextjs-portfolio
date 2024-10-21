@@ -1,10 +1,9 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
+import { FaPython } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+
 
 export const links = [
   {
@@ -35,73 +34,90 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduated BCA",
+    location: "H.H. The Rajah's College, Pudukkottai",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I graduated with a Bachelor of Computer Applications (BCA) in 2021 from H.H. The Rajah's College, Pudukkottai.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2021",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Graduated MCA",
+    location: "Anna University, Trichy",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "I completed my Master of Computer Applications (MCA) in 2023 from Anna University, Trichy, enhancing my knowledge in software development.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2023",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Front-End Developer Intern",
+    location: "Netcraft Solutions Pvt Ltd",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I worked as a Front-End Developer intern for four months, gaining experience in modern web development technologies and building user interfaces.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "May 2023 - Aug 2023",
+  },
+  {
+    title: "Algorithm Trading Intern",
+    location: "Algowizz",
+    description:
+      "During my two-month internship, I contributed to algorithmic trading projects by writing Python scripts for various trading strategies.",
+    icon: React.createElement(FaPython),
+    date: "Sep 2023 - Oct 2023",
+  },
+  {
+    title: "Full-Stack Web and Mobile App Developer",
+    location: "Ticktix Solutions Pvt Ltd, Chennai",
+    description:
+      "I'm currently working full-time as a Full-Stack Web and Mobile App Developer at Ticktix Solutions Pvt Ltd, contributing to both front-end and back-end development since February 2024.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Feb 2024 - present",
   },
 ] as const;
+
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "ERP Web Application",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Developed a comprehensive ERP web application at Ticktix Solutions using Next.js for the front-end and ASP.NET for the back-end API. The application helps manage business operations like accounting, procurement, and HR functions.",
+    techStack: ["Next.js", "ASP.NET", "Tailwind CSS", "MySQL", "Redux"],
+    link: "",
   },
   {
-    title: "rmtDev",
+    title: "Custom Employee Attendance Mobile App",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Built a custom employee attendance tracking app using React Native Expo with real-time geolocation. The app allows employees to punch in/out with precise location data, ensuring accurate timekeeping for businesses.",
+    techStack: ["React Native", "Expo", "Geolocation API", "ASP.NET", "MySQL", "Redux"],
+    link: "",
   },
   {
-    title: "Word Analytics",
+    title: "Money Tracker Mobile App",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Created a personal money tracker app for managing finances, used by myself and a friend. The app allows easy tracking of expenses and income, with simple yet effective functionality for budgeting and financial management.",
+    techStack: ["React Native", "Expo", "Expo Secure Store", "Redux"],
+    link: "",
   },
 ] as const;
 
-export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+export const skillsData1 = [
+  { name: "HTML", logo: "/skillLogo/html.png" },
+  { name: "CSS", logo: "/skillLogo/css.png" },
+  { name: "JavaScript", logo: "/skillLogo/js.png" },
+  { name: "Typescript", logo: "/skillLogo/ts.png" },
+  { name: "Reactjs", logo: "/skillLogo/react.png" },
+  { name: "Nextjs", logo: "/skillLogo/nextjs.png" },
+  { name: "Python", logo: "/skillLogo/python.png" },
+  { name: "C#", logo: "/skillLogo/c-sharp.png" },
+  { name: "Asp .NET", logo: "/skillLogo/asp.png" },
+  
 ] as const;
+export const skillsData2 = [
+  { name: "MySQL", logo: "/skillLogo/mysql.png" },
+  { name: "SQL", logo: "/skillLogo/sql.png" },
+  { name: "Tailwind", logo: "/skillLogo/tailwind.png" },
+  { name: "MUI", logo: "/skillLogo/mui.png" },
+  { name: "Redux", logo: "/skillLogo/redux.png" },
+  { name: "Git", logo: "/skillLogo/git.png" },
+] as const;
+

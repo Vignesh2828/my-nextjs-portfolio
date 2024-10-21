@@ -2,22 +2,36 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import { skillsData } from "@/lib/data";
+import { skillsData1, skillsData2 } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
+const sliderAnimation1 = {
+  animate: {
+    x: ["0%", "-100%"],
     transition: {
-      delay: 0.05 * index,
+      x: {
+        repeat: Infinity,
+        repeatType: "loop",
+        duration: 20,
+        ease: "linear",
+      },
     },
-  }),
+  },
+};
+
+const sliderAnimation2 = {
+  animate: {
+    x: ["-100%", "0%"],
+    transition: {
+      x: {
+        repeat: Infinity,
+        repeatType: "loop",
+        duration: 20,
+        ease: "linear",
+      },
+    },
+  },
 };
 
 export default function Skills() {
@@ -29,24 +43,53 @@ export default function Skills() {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>My skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skillsData.map((skill, index) => (
-          <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-          >
-            {skill}
-          </motion.li>
-        ))}
-      </ul>
+      <SectionHeading>My Skills</SectionHeading>
+
+      <div className="overflow-hidden w-full mb-10">
+        <motion.div
+          className="flex gap-6"
+          variants={sliderAnimation1}
+          animate="animate"
+        >
+          {[...skillsData1, ...skillsData1].map((skill, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 flex items-center"
+              style={{ minWidth: "150px" }}
+            >
+              <img
+                src={skill.logo}
+                alt={`${skill.name} logo`}
+                className="h-8 w-8 mr-2"
+              />
+              <span>{skill.name}</span>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+
+      <div className="overflow-hidden w-full">
+        <motion.div
+          className="flex gap-6"
+          variants={sliderAnimation2}
+          animate="animate"
+        >
+          {[...skillsData2, ...skillsData2].map((skill, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 flex items-center"
+              style={{ minWidth: "150px" }}
+            >
+              <img
+                src={skill.logo}
+                alt={`${skill.name} logo`}
+                className="h-8 w-8 mr-2"
+              />
+              <span>{skill.name}</span>
+            </div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }
