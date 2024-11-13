@@ -41,7 +41,7 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="w-full max-w-2xl mx-auto py-8"
+      className="w-full max-w-5xl mx-auto py-8"
     >
       <SectionHeading>My Skills</SectionHeading>
 
