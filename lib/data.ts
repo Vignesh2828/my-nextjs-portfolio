@@ -82,23 +82,40 @@ export const projectsData = [
     description:
       "Developed a comprehensive ERP web application at Ticktix Solutions using Next.js for the front-end and ASP.NET for the back-end API. The application helps manage business operations like accounting, procurement, and HR functions.",
     techStack: ["Next.js", "ASP.NET", "Tailwind CSS", "MySQL", "Redux"],
-    link: "",
+    keyFeatures: {},
+    link: ""
   },
   {
     title: "Custom Employee Attendance Mobile App",
     description:
       "Built a custom employee attendance tracking app using React Native Expo with real-time geolocation. The app allows employees to punch in/out with precise location data, ensuring accurate timekeeping for businesses.",
     techStack: ["React Native", "Expo", "Geolocation API", "ASP.NET", "MySQL", "Redux"],
-    link: "",
+    keyFeatures: {},
+    link: ""
+  },
+  {
+    title: "Urbnseek - Local Services and Events Discovery App 📎",
+    description:
+      "The Urbnseek app is designed to connect users with a wide range of local services, activities, and events within their area, making it easy for anyone to explore and discover nearby experiences. Built with React Native and Expo, this app leverages the Geolocation API to offer personalized, location-based suggestions, ensuring that users can easily find what's available close to them.",
+    keyFeatures: {
+      "Simple Profile Creation": "Users can create a profile and view their personal information with a few simple steps.",
+      "Verified Services": "All services are 100% verified. Service providers complete Aadhaar and PAN verification to ensure authenticity.",
+      "Service Discovery and Categories": "Users can explore services by category and use location-based suggestions to find relevant options nearby.",
+      "Service Reviews and Ratings": "Detailed reviews, ratings, and images of recently completed works are available for each service.",
+      "Recommended Services": "Users receive suggestions for related services based on their preferences and browsing history."
+    },
+    techStack: ["React Native", "Expo", "Geolocation API", "Node.js", "Express.js", "MySQL", "Redux", "AWS"],
+    link: "https://www.urbnseek.online"
   },
   {
     title: "Money Tracker Mobile App",
     description:
       "Created a personal money tracker app for managing finances, used by myself and a friend. The app allows easy tracking of expenses and income, with simple yet effective functionality for budgeting and financial management.",
     techStack: ["React Native", "Expo", "Expo Secure Store", "Redux"],
-    link: "",
-  },
-] as const;
+    keyFeatures: {},
+    link: ""
+  }
+];
 
 export const skillsData1 = [
   { name: "HTML", logo: "/skillLogo/html.png" },
