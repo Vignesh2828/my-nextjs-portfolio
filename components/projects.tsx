@@ -135,16 +135,16 @@ export default function Projects() {
               ))}
             </div>
 
-            {/* {project.link && (
+            {project.link && (
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800 transition-colors"
+                className="text-black-600 hover:text-blue-800 transition-colors"
               >
-                <FaGithub className="text-2xl" />
+                <FaGithub className="text-3xl" />
               </a>
-            )} */}
+            )}
           </motion.div>
         ))}
       </div>

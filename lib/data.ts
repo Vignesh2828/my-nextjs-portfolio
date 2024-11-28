@@ -104,8 +104,8 @@ export const projectsData = [
       "Service Reviews and Ratings": "Detailed reviews, ratings, and images of recently completed works are available for each service.",
       "Recommended Services": "Users receive suggestions for related services based on their preferences and browsing history."
     },
-    techStack: ["React Native", "Expo", "Geolocation API", "Node.js", "Express.js", "MySQL", "Redux", "AWS"],
-    link: "https://www.urbnseek.online"
+    techStack: ["React Native", "Expo", "Geolocation API", "Node.js", "Express.js", "Mongo DB", "Redux", "AWS"],
+    link: "https://github.com/Vignesh2828/UrbnSeek"
   },
   {
     title: "Money Tracker Mobile App",
@@ -124,6 +124,9 @@ export const skillsData1 = [
   { name: "Typescript", logo: "/skillLogo/ts.png" },
   { name: "Reactjs", logo: "/skillLogo/react.png" },
   { name: "Nextjs", logo: "/skillLogo/nextjs.png" },
+  { name: "Expo", logo: "/skillLogo/expo.png" },
+  { name: "Node.js", logo: "/skillLogo/node.png" },
+  { name: "Express.js", logo: "/skillLogo/express.png" },
   { name: "Python", logo: "/skillLogo/python.png" },
   { name: "C#", logo: "/skillLogo/c-sharp.png" },
   { name: "Asp .NET", logo: "/skillLogo/asp.png" },
@@ -131,10 +134,12 @@ export const skillsData1 = [
 ] as const;
 export const skillsData2 = [
   { name: "MySQL", logo: "/skillLogo/mysql.png" },
+  { name: "Mongo DB", logo: "/skillLogo/mongo.png" },
   { name: "SQL", logo: "/skillLogo/sql.png" },
   { name: "Tailwind", logo: "/skillLogo/tailwind.png" },
   { name: "MUI", logo: "/skillLogo/mui.png" },
   { name: "Redux", logo: "/skillLogo/redux.png" },
   { name: "Git", logo: "/skillLogo/git.png" },
+  { name: "AWS", logo: "/skillLogo/aws.png" },
 ] as const;
 
