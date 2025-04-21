@@ -124,6 +124,7 @@ export const skillsData1 = [
   { name: "Typescript", logo: "/skillLogo/ts.png" },
   { name: "Reactjs", logo: "/skillLogo/react.png" },
   { name: "Nextjs", logo: "/skillLogo/nextjs.png" },
+  { name: "AngularJS", logo: "/skillLogo/angularjs.png" },
   { name: "Expo", logo: "/skillLogo/expo.png" },
   { name: "Node.js", logo: "/skillLogo/node.png" },
   { name: "Express.js", logo: "/skillLogo/express.png" },
