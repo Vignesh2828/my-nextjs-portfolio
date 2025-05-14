@@ -55,7 +55,7 @@ export const experiencesData = [
     description:
       "I worked as a Front-End Developer intern for four months, gaining experience in modern web development technologies and building user interfaces.",
     icon: React.createElement(FaReact),
-    date: "May 2023 - Aug 2023",
+    date: "Mar 2023 - Jul 2023",
   },
   {
     title: "Algorithm Trading Intern",
@@ -63,7 +63,7 @@ export const experiencesData = [
     description:
       "During my two-month internship, I contributed to algorithmic trading projects by writing Python scripts for various trading strategies.",
     icon: React.createElement(FaPython),
-    date: "Sep 2023 - Oct 2023",
+    date: "Aug 2023 - Sep 2023",
   },
   {
     title: "Full-Stack Web and Mobile App Developer",
