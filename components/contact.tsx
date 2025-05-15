@@ -4,9 +4,9 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
+import { sendEmail } from "@/actions/sendEmailJs";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -42,10 +42,13 @@ export default function Contact() {
       <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
+          const senderEmail = formData.get("senderEmail") as string;
+          const message = formData.get("message") as string;
+
+          const { error } = await sendEmail({ senderEmail, message });
 
           if (error) {
-            toast.error(error);
+            toast.error(typeof error === "string" ? error : "An unexpected error occurred.");
             return;
           }
 
