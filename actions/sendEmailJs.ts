@@ -15,10 +15,10 @@ export const sendEmail = async (values: {
     }
 
     const result = await emailjs.send(
-      process.env.EMAIL_SERVICE_ID,
-      process.env.EMAIL_TEMPLATE_ID,
+      'service_z5ugceq',
+      'template_z4ca7j2',
       templateParams,
-      process.env.EMAIL_PUBLIC_KEY
+      '5NzJBKx3Oo-zmAq4D'
     );
 
     return { success: true, result };
