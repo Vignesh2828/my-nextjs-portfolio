@@ -83,7 +83,7 @@ export const projectsData = [
       "Developed a comprehensive ERP web application at Ticktix Solutions using Next.js for the front-end and ASP.NET for the back-end API. The application helps manage business operations like accounting, procurement, and HR functions.",
     techStack: ["Next.js", "ASP.NET", "Tailwind CSS", "MySQL", "Redux"],
     keyFeatures: {},
-    link: ""
+    link: {}
   },
   {
     title: "Custom Employee Attendance Mobile App",
@@ -91,7 +91,7 @@ export const projectsData = [
       "Built a custom employee attendance tracking app using React Native Expo with real-time geolocation. The app allows employees to punch in/out with precise location data, ensuring accurate timekeeping for businesses.",
     techStack: ["React Native", "Expo", "Geolocation API", "ASP.NET", "MySQL", "Redux"],
     keyFeatures: {},
-    link: ""
+    link: {}
   },
   {
     title: "Urbnseek - Local Services and Events Discovery App 📎",
@@ -105,7 +105,10 @@ export const projectsData = [
       "Recommended Services": "Users receive suggestions for related services based on their preferences and browsing history."
     },
     techStack: ["React Native", "Expo", "Geolocation API", "Node.js", "Express.js", "Mongo DB", "Redux", "AWS"],
-    link: "https://github.com/Vignesh2828/UrbnSeek"
+    link: {
+    type : "github",
+    url : "https://github.com/Vignesh2828/UrbnSeek"
+  }
   },
   {
     title: "Money Tracker Mobile App",
@@ -113,7 +116,44 @@ export const projectsData = [
       "Created a personal money tracker app for managing finances, used by myself and a friend. The app allows easy tracking of expenses and income, with simple yet effective functionality for budgeting and financial management.",
     techStack: ["React Native", "Expo", "Expo Secure Store", "Redux"],
     keyFeatures: {},
-    link: ""
+    link: {}
+  },
+  {
+    title: "Money Tracker Mobile App",
+    description:
+      "Created a personal money tracker app for managing finances, used by myself and a friend. The app allows easy tracking of expenses and income, with simple yet effective functionality for budgeting and financial management.",
+    techStack: ["React Native", "Expo", "Expo Secure Store", "Redux"],
+    keyFeatures: {},
+    link: {}
+  },
+  {
+  title: "DPS Tuition Centre Website",
+  description:
+    "Developed a responsive, SEO-optimized website for DPS Tuition Centre to showcase personalized one-to-one academic tuition services. The site includes sections for features, testimonials, FAQs, contact, and WhatsApp integration to boost student engagement and conversions.",
+  techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "React Icons", "React Hot Toast"],
+  keyFeatures: {
+   
+  },
+  link: {
+    type : "website",
+    url : "https://dpstuition.com"
+  }
+},
+
+  {
+    title: "Trackbot - Chennai Metro Water Seawater Desalination Plant (Web App)",
+    description:
+      " A real-time web tracking platform developed using Angular and Google Maps, built for the Chennai Metro Water Seawater Desalination Plant project. The system monitors shipping containers, underwater pipelines, and vessels using WebSocket-based live updates, providing a seamless, interactive tracking experience.",
+    techStack: ["Angular", "Google Maps API", "WebSocket", "Angular Material"],
+    keyFeatures: {
+      "one": "Integrated live GPS tracking using WebSocket to display tracker movements with dynamic status indicators",
+      "two": "Implemented KML file upload feature to visualize underwater pipe layouts on the map. Users can customize polyline and marker styles.",
+      "three" : "Enabled full edit capability of KML paths and markers, with real-time map updates and persistent changes across sessions.",
+      "four" : "Designed playback feature to replay tracker history over 24-hour periods with play, pause, fast-forward, and reverse controls.",
+      "five" : "Allowed users to mark custom points on the map with draggable markers and maintain their state across sessions.",
+      "sixth" :"Designed an interactive dashboard with detailed reports, data visualizations, and management tools for users, trackers, and configurations."
+    },
+    link: {}
   }
 ];
 
