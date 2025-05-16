@@ -42,6 +42,7 @@ export default function Contact() {
       <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
+          console.log('sender', formData.get("senderEmail") as string)
           const senderEmail = formData.get("senderEmail") as string;
           const message = formData.get("message") as string;
 

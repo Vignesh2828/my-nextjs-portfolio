@@ -6,7 +6,7 @@ export const sendEmail = async (values: {
 }) => {
   const templateParams = {
     from_email: values.senderEmail,
-    message: values.message,
+    message: values.message + ' from ' + (values.senderEmail),
   };
 
   try {
