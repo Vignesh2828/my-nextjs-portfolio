@@ -119,14 +119,6 @@ export const projectsData = [
     link: {}
   },
   {
-    title: "Money Tracker Mobile App",
-    description:
-      "Created a personal money tracker app for managing finances, used by myself and a friend. The app allows easy tracking of expenses and income, with simple yet effective functionality for budgeting and financial management.",
-    techStack: ["React Native", "Expo", "Expo Secure Store", "Redux"],
-    keyFeatures: {},
-    link: {}
-  },
-  {
   title: "DPS Tuition Centre Website",
   description:
     "Developed a responsive, SEO-optimized website for DPS Tuition Centre to showcase personalized one-to-one academic tuition services. The site includes sections for features, testimonials, FAQs, contact, and WhatsApp integration to boost student engagement and conversions.",
