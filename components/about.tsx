@@ -11,35 +11,33 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
       id="about"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="relative mb-28 max-w-[55rem] mx-auto text-center leading-8 sm:mb-40 scroll-mt-28 px-6"
     >
-      <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
-        {" "}
-        <span className="font-bold">Hello, I'm Vigneshwaran.</span> I completed
-        my undergraduate studies in <span className="font-medium">BCA</span> and
-        went on to earn my <span className="font-medium">MCA</span>. Following
-        my academic journey, I immersed myself in an internship focusing on{" "}
-        <span className="italic">React and Python</span>, where I spent six
-        months honing my skills in developing a marketplace and algorithmic
-        trading systems. My core stack includes{" "}
-        <span className="font-medium">Next.js, React, React Native, ASP.NET,</span> and{" "}
-        <span className="font-medium">MySQL</span>. I have a keen interest in{" "}
-        <span className="underline">space-oriented news</span> and technology,
-        always eager to explore new advancements in these fields.{" "}
-      </p>{" "}
-      <p>
-        {" "}
-        <span className="italic">When I'm not coding</span>, you can find me
-        diving into the latest tech trends, staying updated on astronomical
-        discoveries, or indulging my curiosity about the universe. I’m
-        passionate about continuous learning, always seeking to expand my
-        knowledge and skills.{" "}
-      </p>
+      <SectionHeading>About Me</SectionHeading>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="mt-6 space-y-5 text-neutral-700 text-[1.05rem]"
+      >
+        <p>
+          <span className="font-bold">Hello, I'm Vigneshwaran.</span> I’m a developer who loves crafting clean, thoughtful, and user-focused digital experiences. I care deeply about how products feel and perform, and how people interact with them.
+        </p>
+
+        <p>
+          I’m passionate about creating seamless experiences and constantly refining my craft to stay aligned with modern development practices. I enjoy turning concepts into reality and focusing on the subtle details that elevate the overall experience.
+        </p>
+
+        <p>
+          Outside of work, I’m endlessly curious—exploring new ideas, reading about space and scientific discoveries, and learning about anything that sparks inspiration. Continuous growth drives me, both in technology and in understanding the world around me.
+        </p>
+      </motion.div>
     </motion.section>
   );
 }

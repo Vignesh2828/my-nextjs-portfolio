@@ -146,6 +146,24 @@ export const projectsData = [
       "sixth" :"Designed an interactive dashboard with detailed reports, data visualizations, and management tools for users, trackers, and configurations."
     },
     link: {}
+  },
+  {
+    title: "BillSmith - Invoice & GST Manager",
+    description:
+      "BillSmith is an invoice management application that helps users create and manage invoices effortlessly. Users can email invoices to clients, share public read-only links, download invoices as PDF, and view a dashboard summary for quick financial insights. The app also generates GSTR-1 reports from invoice data to simplify GST filing. Authentication and role-based authorization secure the application.",
+    techStack: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS", "JWT"],
+    keyFeatures: {
+      "Create & Manage Invoices": "Design, save and edit invoices with line items, taxes and discounts.",
+      "Share & Email": "Send invoices directly to clients via authenticated email or share a public, read-only link.",
+      "PDF Export": "Download invoices as production-ready PDFs.",
+      "Dashboard Summary": "Quick overview of receivables, outstanding invoices and cashflow metrics.",
+      "GSTR-1 Report": "Generate GSTR-1 reports from invoice data to simplify GST filing.",
+      "Authentication & Authorization": "User accounts with secure auth and role-based access controls."
+    },
+    link: {
+      type : "website",
+      url : "https://billsmith.vercel.app"
+    }
   }
 ];
 

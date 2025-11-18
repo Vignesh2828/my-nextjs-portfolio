@@ -31,7 +31,7 @@ export default function Projects() {
     <motion.section
       ref={sectionRef}
       id="projects"
-      className="scroll-mt-24 px-4 py-20 max-w-6xl mx-auto"
+      className="scroll-mt-24 px-4 max-w-7xl mx-auto"
       initial="hidden"
       animate={controls}
     >
