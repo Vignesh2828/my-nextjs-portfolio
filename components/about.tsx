@@ -24,7 +24,7 @@ export default function About() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
-        className="mt-6 space-y-5 text-neutral-700 text-[1.05rem]"
+        className="mt-6 space-y-5 text-[1.05rem]"
       >
         <p>
           <span className="font-bold">Hello, I'm Vigneshwaran.</span> I’m a developer who loves crafting clean, thoughtful, and user-focused digital experiences. I care deeply about how products feel and perform, and how people interact with them.
