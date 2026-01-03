@@ -1,0 +1,147 @@
+---
+title: "Why Testing Only 200 OK Is Lying to Yourself"
+date: "2026-01-03"
+description: "Why real HTTP failure testing matters and how I built Status Code as a Service"
+image: "/blog-images/blog_scaas.png"
+---
+
+## And how I built *Status Code as a Service* for fun
+
+Most applications work perfectly.
+
+Until they don’t.
+
+As developers, we spend a lot of time building and testing the **happy path** — APIs returning `200 OK`, clean JSON responses, smooth UI flows. But real-world systems don’t live in that world.
+
+They live in a much messier place:
+
+- **404 Not Found**
+- **429 Too Many Requests**
+- **500 Internal Server Error**
+- **503 Service Unavailable**
+
+And if your frontend or client code has never seen those responses during development, it is usually not prepared for them in production.
+
+---
+
+## The problem with “mocking success”
+
+In many projects, error handling is tested in one of three ways:
+
+- Not tested at all
+- Manually faked by changing code
+- Mocked with static responses
+
+All three approaches miss something important: **real HTTP behavior**.
+
+HTTP status codes are not just numbers. They influence:
+
+- Retry logic  
+- UI state transitions  
+- Caching behavior  
+- Rate limiting flows  
+- User experience under failure  
+
+Mocking a `500` inside application code is **not** the same as receiving an actual `500` from an API.
+
+---
+
+## A small side project (inspired by *No as a Service*)
+
+While exploring this problem, I came across the fun project **No as a Service**, which simply returns “no” via an API.
+
+That sparked a thought:
+
+> What if we had something similar — but for HTTP status codes?
+
+Not a serious product.  
+Not a startup idea.  
+Just a small, learning-focused side project.
+
+That is how **Status Code as a Service (SCaaS)** started.
+
+---
+
+## What is Status Code as a Service?
+
+**Status Code as a Service** is a lightweight HTTP API that returns **real HTTP status codes on demand**.
+
+It supports:
+
+- Deterministic responses  
+  `GET /status/404`
+- Random status codes
+- Weighted distributions (more realistic than pure randomness)
+- Category-based responses  
+  (success, client error, server error)
+
+The idea is simple:
+
+> Let your frontend or API client experience **real failures** during development.
+
+---
+
+## A small but important detail
+
+Some infrastructure layers (CDNs, proxies) do not forward non-200 responses reliably.
+
+So instead of returning them directly, the API simulates them safely by:
+
+- Returning **200 OK**
+- Including the **intended status code** in the response payload
+
+It is a small detail — but it highlights how HTTP behavior differs once real infrastructure is involved.
+
+---
+
+## Why this was useful (even as a “fun” project)
+
+Even though this started as a casual experiment, it turned out to be genuinely useful for:
+
+- Testing frontend error states
+- Verifying retry and backoff logic
+- Understanding rate-limiting behavior
+- Simulating partial outages
+- Learning how CDNs treat HTTP responses
+
+Most importantly, it reinforced one idea:
+
+> **If you don’t test failure, you haven’t really tested your system.**
+
+---
+
+## Keeping it simple
+
+The project is intentionally minimal:
+
+- Stateless
+- No database
+- Node.js + Express
+- Clear, predictable behavior
+
+It is open source, easy to run locally, and easy to deploy.
+
+If someone finds it useful — great.  
+If not — it was still a valuable learning experience.
+
+---
+
+## Final thought
+
+Testing only `200 OK` responses gives a **false sense of confidence**.
+
+Real systems fail.  
+Networks fail.  
+APIs fail.
+
+Your application should be ready for that — **before production finds out for you**.
+
+---
+
+### Links
+
+## GitHub
+[View on GitHub](https://github.com/Vigneshmani28/statuscode-as-a-service)
+
+## Live API
+[Try the Live API](https://scaas.onrender.com/)
