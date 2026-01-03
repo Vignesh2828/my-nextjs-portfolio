@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import Image from "next/image";
+import { ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
@@ -35,21 +36,21 @@ const components = {
   li: (props: any) => {
     // Custom li component to handle links in list items
     const children = props.children;
-    
-    if (typeof children === 'string') {
+
+    if (typeof children === "string") {
       // Check for patterns like "**GitHub** https://..."
       const parts = children.split(/(\*\*.*?\*\*)/g);
-      
+
       if (parts.length > 1) {
         // Process bold text and URLs
         const processedParts = parts.map((part: string, index: number) => {
           if (part.match(/^\*\*.*\*\*$/)) {
             // Extract bold text
-            const boldText = part.replace(/\*\*/g, '');
+            const boldText = part.replace(/\*\*/g, "");
             // Check if next part is a URL
-            const nextPart = parts[index + 1] || '';
+            const nextPart = parts[index + 1] || "";
             const urlMatch = nextPart.trim().match(/(https?:\/\/[^\s]+)/);
-            
+
             if (urlMatch) {
               const url = urlMatch[0];
               return (
@@ -71,11 +72,11 @@ const components = {
           }
           return part;
         });
-        
+
         return <li className="pl-2">{processedParts}</li>;
       }
     }
-    
+
     return <li className="pl-2" {...props} />;
   },
   blockquote: (props: any) => (
@@ -199,7 +200,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             </div>
           </div>
         )}
-        
+
         <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
           {data.title}
         </h1>
@@ -212,7 +213,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             })}
           </time>
           <span className="text-gray-300">•</span>
-          <span className="text-sm">5 min read</span>
+          <span className="text-sm">
+            {Math.max(1, Math.ceil(content.split(" ").length / 200))} min read
+          </span>
         </div>
         {data.description && (
           <p className="mt-6 text-lg text-gray-700 italic border-l-4 border-blue-500 pl-4 py-2 bg-blue-50">
@@ -235,18 +238,21 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             <Link href={`/blog/${prevPost.slug}`} className="group flex-1">
               <div className="text-left">
                 <p className="text-sm text-gray-500 mb-1">Previous post</p>
-                <p className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
-                  ← {prevPost.title}
+                <p className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors flex items-center gap-1">
+                  <ChevronsLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+                  {prevPost.title}
                 </p>
               </div>
             </Link>
           )}
+
           {nextPost && (
             <Link href={`/blog/${nextPost.slug}`} className="group flex-1">
               <div className="text-right">
                 <p className="text-sm text-gray-500 mb-1">Next post</p>
-                <p className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
-                  {nextPost.title} →
+                <p className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors flex items-center justify-end gap-1">
+                  {nextPost.title}
+                  <ChevronsRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </p>
               </div>
             </Link>
