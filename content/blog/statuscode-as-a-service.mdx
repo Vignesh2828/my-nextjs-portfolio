@@ -1,5 +1,5 @@
 ---
-title: "Why Testing Only 200 OK Is Lying to Yourself"
+title: "Statuscode as a service (SCaaS)"
 date: "2026-01-03"
 description: "Why real HTTP failure testing matters and how I built Status Code as a Service"
 image: "/blog-images/blog_scaas.png"
@@ -9,7 +9,7 @@ image: "/blog-images/blog_scaas.png"
 
 Most applications work perfectly. Until the backend stops returning 200 OK?
 
-As developers, we spend a lot of time building and testing the **happy path** — APIs returning `200 OK`, clean JSON responses, smooth UI flows. But real-world systems don’t live in that world.
+As developers, we spend a lot of time building and testing the **happy path** - APIs returning `200 OK`, clean JSON responses, smooth UI flows. But real-world systems don’t live in that world.
 
 They live in a much messier place:
 
@@ -50,7 +50,7 @@ While exploring this problem, I came across the fun project **No as a Service**,
 
 That sparked a thought:
 
-> What if we had something similar — but for HTTP status codes?
+> What if we had something similar - but for HTTP status codes?
 
 Not a serious product.  
 Not a startup idea.  
@@ -62,7 +62,7 @@ That is how **Status Code as a Service (SCaaS)** started.
 
 ## What is Status Code as a Service?
 
-**Status Code as a Service** is a lightweight HTTP API that returns **real HTTP status codes on demand**.
+[**Status Code as a Service**](https://github.com/Vigneshmani28/statuscode-as-a-service) is a lightweight HTTP API that returns **real HTTP status codes on demand**.
 
 It supports:
 
@@ -88,7 +88,7 @@ So instead of returning them directly, the API simulates them safely by:
 - Returning **200 OK**
 - Including the **intended status code** in the response payload
 
-It is a small detail — but it highlights how HTTP behavior differs once real infrastructure is involved.
+It is a small detail - but it highlights how HTTP behavior differs once real infrastructure is involved.
 
 ---
 
@@ -119,8 +119,8 @@ The project is intentionally minimal:
 
 It is open source, easy to run locally, and easy to deploy.
 
-If someone finds it useful — great.  
-If not — it was still a valuable learning experience.
+If someone finds it useful - great.  
+If not - it was still a valuable learning experience.
 
 ---
 
@@ -132,7 +132,7 @@ Real systems fail.
 Networks fail.  
 APIs fail.
 
-Your application should be ready for that — **before production finds out for you**.
+Your application should be ready for that - **before production finds out for you**.
 
 ---
 
