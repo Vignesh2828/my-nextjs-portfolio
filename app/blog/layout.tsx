@@ -9,7 +9,7 @@ export default function BlogLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="min-h-screen bg-white text-gray-900 sm:pt-18">
+    <main className="min-h-screen sm:pt-18">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12 pb-8 border-b border-gray-200">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">

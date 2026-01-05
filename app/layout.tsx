@@ -26,7 +26,8 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header /> {children} <Footer />
-            <Toaster position="top-right" /> <ThemeSwitch />
+            <Toaster position="top-right" />
+            {/* <ThemeSwitch /> */}
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
