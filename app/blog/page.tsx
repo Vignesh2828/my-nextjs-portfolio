@@ -27,7 +27,7 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
       <div className="mb-8 sm:mb-12">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
           <div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">Blog</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">My Blog</h1>
             <p className="text-gray-600">
               {searchQuery ? `${filteredPosts.length} of ${allPosts.length}` : allPosts.length} 
               {allPosts.length === 1 ? ' article' : ' articles'}
