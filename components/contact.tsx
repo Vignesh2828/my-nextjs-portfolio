@@ -34,7 +34,7 @@ export default function Contact() {
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
         <a className="font-bold" href="mailto:vigneshwaranm.me@gmail.com">
-        vigneshwaranm.me@gmail.com
+          vigneshwaranm.me@gmail.com
         </a>{" "}
         or through this form.
       </p>
@@ -42,20 +42,32 @@ export default function Contact() {
       <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
-          console.log('sender', formData.get("senderEmail") as string)
+          const honeypot = formData.get("company") as string;
+          if (honeypot) {
+            return;
+          }
+
           const senderEmail = formData.get("senderEmail") as string;
           const message = formData.get("message") as string;
 
           const { error } = await sendEmail({ senderEmail, message });
 
           if (error) {
-            toast.error(typeof error === "string" ? error : "An unexpected error occurred.");
+            toast.error("An unexpected error occurred.");
             return;
           }
 
           toast.success("Email sent successfully!");
         }}
       >
+        <input
+          type="text"
+          name="company"
+          tabIndex={-1}
+          autoComplete="off"
+          className="hidden"
+        />
+
         <input
           className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="senderEmail"
